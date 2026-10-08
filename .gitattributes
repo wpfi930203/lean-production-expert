@@ -1,0 +1,24 @@
+# 统一行尾处理（Windows 开发 + 多平台使用）
+* text=auto eol=lf
+
+# 显式声明文本类型
+*.md      text eol=lf
+*.json    text eol=lf
+*.py      text eol=lf
+*.sh      text eol=lf
+*.txt     text eol=lf
+*.svg     text eol=lf
+.gitignore      text eol=lf
+.gitattributes  text eol=lf
+
+# 二进制文件不做行尾转换
+*.png     binary
+*.jpg     binary
+*.jpeg    binary
+*.gif     binary
+*.ico     binary
+*.pdf     binary
+*.zip     binary
+
+# Git diff 显示
+*.md      diff=markdown

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- 精益生产专家 · Lean House（丰田 TPS 结构符号）-->
+  <!-- 屋顶=顾客价值  过梁=价值传递  双柱=准时化JIT+自働化Jidoka  地基=标准作业 -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#172A47"/>
+      <stop offset="1" stop-color="#0C1A2D"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="44" fill="url(#bg)"/>
+  <!-- 屋顶（顾客价值 / 目的）-->
+  <polygon points="100,30 178,76 22,76" fill="#FFFFFF"/>
+  <!-- 过梁：价值向下传递 -->
+  <rect x="62" y="76" width="76" height="9" fill="#FACD15"/>
+  <!-- 双柱：准时化 JIT + 自働化 Jidoka -->
+  <rect x="69" y="89" width="24" height="61" rx="6" fill="#38BDF8"/>
+  <rect x="107" y="89" width="24" height="61" rx="6" fill="#38BDF8"/>
+  <!-- 地基：标准作业 / 稳定 / 目视化 -->
+  <rect x="40" y="158" width="120" height="16" rx="5" fill="#96B4D8"/>
+</svg>

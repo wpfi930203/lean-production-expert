@@ -1,0 +1,584 @@
+{
+  "name": "lean-production-expert",
+  "display_name": "精益生产专家",
+  "icon": "icons/logo.png",
+  "icon_design": {
+    "motif": "精益屋Lean House（丰田 TPS 唯一公认的结构符号）",
+    "elements": {
+      "屋顶(白 #FFFFFF)": "顾客价值 / 目的",
+      "过梁(琥珀 #FACD15)": "价值向下传递",
+      "双柱(青 #38BDF8)": "准时化 JIT + 自働化 Jidoka（TPS 两大支柱）",
+      "地基(蓝灰 #96B4D8)": "标准作业 / 稳定 / 目视化"
+    },
+    "rationale": "不用齿轮——齿轮只表示「制造」，不表示「精益」。精益屋把 TPS 结构（目的→两柱→基础）编码进一个图形。",
+    "specs": "200x200 PNG（对齐 linkfox-amazon-ads 规格）+ SVG 源文件",
+    "colors": "#172A47 → #0C1A2D 底渐变；避免与本机其他 skill 图标撞色",
+    "min_legible_size": "约 32px（skill 列表常用 40px 以上）",
+    "generator": "tools/make_icon.py（纯 Pillow 手绘矢量，零图像生成调用）",
+    "license": "原创矢量，无版权风险"
+  },
+  "industry": "lean-manufacturing",
+  "industry_cn": "精益生产",
+  "structure": "dual-layer",
+  "version": "2.0.0-patch4",
+  "locale": "zh-CN",
+  "profile": "practitioner",
+  "focus": "comprehensive",
+  "last_research_date": "2026-10-07",
+  "generator": "master-skill六轨蒸馏 (v2.0.0 认知层增量)",
+  "layers": {
+    "execution": {
+      "version": "1.3.0",
+      "volumes": 16,
+      "approx_chars": 471419,
+      "bytes_utf8": 1085606,
+      "count_correction": "v1.3.0 曾记为约 89 万字，系把字节数误记为字符数；v2.0 按实测校正为 471,419 字符 / 1,085,606 字节",
+      "tools": 30,
+      "formulas": 60,
+      "rollout_steps": 13,
+      "note": "v2.0 零删除；原§0–§9 编号保持不变以维持 16 分册交叉引用"
+    },
+    "cognitive": {
+      "version": "2.0.0",
+      "approx_chars": 125000,
+      "figures": 15,
+      "tools_with_selection_logic": 57,
+      "decision_trees": 6,
+      "anti_patterns": 25,
+      "failure_modes": 18,
+      "glossary_terms": 102,
+      "canon_books": 16,
+      "sources_indexed": 62,
+      "playbook_rules": 10,
+      "mental_models": 6,
+      "intellectual_schools": 6,
+      "live_controversies": 7
+    }
+  },
+  "tracks_covered": [
+    "figures",
+    "tools",
+    "workflows",
+    "canon",
+    "sources",
+    "glossary"
+  ],
+  "mental_models": [
+    {
+      "id": "M1",
+      "name": "时间优先于产能",
+      "one_liner": "精益所有诊断的落点是时间，不是产能、成本、士气",
+      "limitation": "研发周期极长/定制化极高的场景（试制线）流动价值下降，须换研发管理框架"
+    },
+    {
+      "id": "M2",
+      "name": "停滞（队列）是最大的浪费",
+      "one_liner": "库存/搬运/等待都是症状，源头是下游没拉动上游",
+      "limitation": "长交期备件等交付承诺刚性的场景，库存是必要战略缓冲而非浪费"
+    },
+    {
+      "id": "M3",
+      "name": "自働化 = 人的判断权",
+      "one_liner": "异常即停、不流出不良；停机的价值是暴露问题而非产能",
+      "limitation": "高变异工艺若无快速响应配套，会退化成停得越多越乱"
+    },
+    {
+      "id": "M4",
+      "name": "无标准无改善资格",
+      "one_liner": "SDCA（维持）先于 PDCA（改善），别用改善的力气做维持的事",
+      "limitation": "易被文化误用为不许质疑；标准是当前最优假设而非真理"
+    },
+    {
+      "id": "M5",
+      "name": "先lean 再 digital",
+      "one_liner": "数字化是放大器不是发动机，流程是错的就把垃圾高效固化",
+      "limitation": "预测性维护/大数据质量预测等感知类场景可与流程改善并行"
+    },
+    {
+      "id": "M6",
+      "name": "精益是系统重构非工具项目",
+      "one_liner": "当项目做大概率失败反弹，当日常管理系统重构做才可能持续",
+      "limitation": "小于50 人的小组织无层级负担，退化为把一件事做好"
+    }
+  ],
+  "fact_corrections": [
+    {
+      "id": 1,
+      "claim": "《新丰田生产方式》是大野耐一 2013 年写的",
+      "correction": "作者是门田安弘（河北大学出版社）；大野耐一 1990 年已去世，只写赠言"
+    },
+    {
+      "id": 2,
+      "claim": "大野耐一 2013 年仍在出书",
+      "correction": "大野耐一生卒 1912-02-29 — 1990-05-28"
+    },
+    {
+      "id": 3,
+      "claim": "精益五大原则是丰田官方定义",
+      "correction": "是沃马克与琼斯的外部重构；丰田官方自述为 JIT + 自働化两根柱"
+    },
+    {
+      "id": 4,
+      "claim": "丰田 14 项管理原则是丰田明文",
+      "correction": "是莱克（Jeffrey Liker）的学者归纳"
+    },
+    {
+      "id": 5,
+      "claim": "今井正明 2024 年去世",
+      "correction": "1930-09-01 — 2023-06-12（享年 92）"
+    },
+    {
+      "id": 6,
+      "claim": "新乡重夫是丰田雇员 / TPS 共同开发者",
+      "correction": "他主要在旭化成等化学企业与日本能率协会任职，是外部顾问"
+    },
+    {
+      "id": 7,
+      "claim": "Borel《Manufacturing Excess》(2010)、Callahan《Toyota Catalysts》(2013)",
+      "correction": "两书均无法核实，判定误记；已替换为 Coffey(2006) 与 鎌田慧(1972)"
+    },
+    {
+      "id": 8,
+      "claim": "三个 M（Muda/Muri/Mura）是并列关系",
+      "correction": "是**因果关系**：Muda（浪费）← Muri（过负荷）+ Mura（不均衡）。Liker 原话（The Toyota Way p53）「消除浪费只是三分之一的方程」",
+      "impact": "本 skill v2.0-patch1 前 §4 判据第 10 条写成「把马（Muda/Muri/Mura）一起治」（并列），已据原文修正；原句还含「把马」乱码",
+      "status": "本 skill 自身缺陷（已自纠）"
+    },
+    {
+      "id": 9,
+      "claim": "大野耐一原文用「自働化」（働）",
+      "correction": "1978 中译本（谢克俭、李颖秋译，中国铁道出版社）**全书 29 处均写作「自動化」（動）**，简体即「自动化」。关键不是字形而是含义",
+      "impact": "引用大野原话时应写「他说的自动化」（日文语境中即指 jidoka），不要写「他说的自働化」",
+      "status": "本 skill 自身缺陷（已自纠）"
+    }
+  ],
+  "empirical_caveats": {
+    "operational_correlation": "positive",
+    "financial_correlation": "weak_or_insignificant",
+    "strongest_tools": [
+      "JIT",
+      "jidoka"
+    ],
+    "weak_or_negative_tools": [
+      "Kaizen",
+      "TPM",
+      "VSM"
+    ],
+    "failure_rate_estimate": "60%-90%",
+    "source": "Belekoukias et al. (2014) 等；含原丰田工程师 Roser 的认同区间",
+    "note": "本 skill 不承诺改善率"
+  },
+  "cli": {
+    "scripts": [
+      "cli/protocol/agentic.sh",
+      "cli/decision/tool-select.sh",
+      "cli/decision/fact-check.sh",
+      "cli/workflow/diagnosis-sop.sh",
+      "cli/workflow/gemba-check.sh"
+    ],
+    "standard_flags": [
+      "--help",
+      "--explain",
+      "--dry-run",
+      "--json"
+    ],
+    "static_checker": "cli/static-check.py",
+    "runtime_verified": false,
+    "runtime_note": "生成环境无可用 bash（PortableGit 仅含 bash.exe，缺 coreutils；WSL 被安全策略阻止），已完成静态检查但未真机运行"
+  },
+  "source_count": 250,
+  "primary_source_ratio": 0.35,
+  "blacklist_hits": 0,
+  "blacklist": [
+    "知乎",
+    "微信公众号",
+    "百度百科",
+    "百度知道",
+    "CSDN"
+  ],
+  "tests": {
+    "execution_layer": {
+      "file": "test-prompts.json",
+      "count": 35,
+      "note": "v1.x，全执行层场景"
+    },
+    "cognitive_layer": {
+      "file": "test-prompts-v2.json",
+      "count": 21,
+      "breakdown": {
+        "fact_check": 8,
+        "mental_model": 5,
+        "boundary": 4,
+        "style": 2,
+        "decoy": 2
+      },
+      "covers": "7 处事实校正全部 + 6 个心智模型全部 + 4 条诚实边界",
+      "highest_priority": "C01–C05（P0）：答错即认知层失效，须立即修 SKILL.md §10.1"
+    }
+  },
+  "knowledge_cards": {
+    "execution_layer": 16,
+    "cognitive_layer": 6,
+    "total": 22,
+    "cognitive_rule": "每张认知层卡片必须带 limitations字段与「局限」小节（失效场景）"
+  },
+  "trigger_policy": {
+    "tier_1_direct": "领域专有词（精益/TPS/看板/拉动/SMED/安灯/现地现物/大野耐一…）出现即激活",
+    "tier_2_require_context": "短词与通用词（5S/6S/A3/MES/ERP/8D/SPC/Cpk/kaizen/lean/takt/gemba…）须与精益语境共现才激活",
+    "rationale": "二级词在日常与跨领域对话里频率极高，一律直接触发会误激活并用精益术语干扰非精益问题",
+    "documented_at": "SKILL.md §0.1"
+  },
+  "canonical_sources": {
+    "playbook": "SKILL.md §10.4（唯一权威版；synthesis.md §2 / 02-tools.md §2 / cli --explain 均为派生副本）",
+    "mental_models": "SKILL.md §10.3",
+    "fact_corrections": "SKILL.md §10.1",
+    "rationale": "v2.0 审查发现 playbook 在 4 处重复维护，存在漂移风险；现指定单一权威版"
+  },
+  "changelog": [
+    {
+      "version": "2.0.0-patch4",
+      "date": "2026-10-07",
+      "change": "《精益工具箱》（第 8 本，Bicheno & Holweg 2016.3）原文级蒸馏。新增 §6.3 负荷/产能/I-II 型浪费/新浪费 10 类+服务业 7 类/四种成熟度评估/Bicheno 版 5 原则；新增 §6.2.6b-e 节拍两个不要做、补料间隔 pitch、目标周期 90%、C.T 取「出现次数最多最短值」（修正 v1.x 的取最小值）；§10.5 补 5S 命名误区机理。交叉校验 16 分册：一致 12 / 不一致 8（已修2 项关键）/ 本书有 skill 无 16 项。⚠️ 该书页标记 = 印刷页 +24。"
+    },
+    {
+      "version": "2.0.0-patch3",
+      "date": "2026-10-07",
+      "change": "《精益书籍》8 本全部完成原文级蒸馏并落地。新增 §6.2 VSM 原典方法（三条流动/现状图四步/未来状态8问/7准则/节拍算式/超市豁免三情形/绿域灰域）并据原典重写 §6.1；新增 §10.8.3 标准作业授权层、§10.8.4 目视化目的、§10.8.5 技术酸测试；删除 §10.7 争议 3 的跨行业质疑方；阶段 1.5 三重验证 100 单元逐条裁定（保留 77/降级 19/淘汰 4），OCR 讹字清洗 14 处；8 本书 0 OCR 错误。"
+    },
+    {
+      "version": "2.0.0-patch1",
+      "date": "2026-10-07",
+      "change": "修复 frontmatter 61 处 YAML 缩进错误（会导致标准 YAML 解析器报错→ skill 加载失败）；description 1860→931 字符；触发词改两级策略（§0.1）；新增 21 条认知层压力测试；新增 6 张认知层知识卡片；Changelog 补 changed/deprecated 表（6 项修正）；playbook 指定单一权威版；修复 card-import-four-moves.md 的同类 YAML 错误。"
+    },
+    {
+      "version": "2.0.0",
+      "date": "2026-10-07",
+      "change": "新增认知层（§10–§12）：master-skill 六轨深度蒸馏约 12.5 万字。6 心智模型、15 位大佬、6 棵选型决策树、25 反模式、18 失败模式、102 术语、智识谱系 7 条争议、Agentic Protocol 7 维度、7 处事实纠错、学术实证负面边界、cli/ 5 脚本、精益屋图标。执行层零删除。"
+    },
+    {
+      "version": "1.3.0",
+      "date": null,
+      "change": "增量 IMA 订阅库「精益知识」820 条资料图谱（09 分册，简介级）"
+    },
+    {
+      "version": "1.1.0",
+      "date": null,
+      "change": "增量《精益生产推行手册》三册（08-A/B/C，OCR 蒸馏）"
+    },
+    {
+      "version": "1.0.0",
+      "date": null,
+      "change": "首版：双语料蒸馏，16 册执行层体系"
+    }
+  ],
+  "changed_in_v2": [
+    {
+      "item": "OEE 85%",
+      "was": "世界级 >85%（暗示通用标准）",
+      "now": "Nakajima 的拉伸目标（0.90×0.95×0.99），行业差异极大，需按行业校准",
+      "status": "changed"
+    },
+    {
+      "item": "精益五大原则",
+      "was": "隐含「丰田官方定义」",
+      "now": "沃麦克与琼斯的外部重构；丰田官方为 JIT + 自働化两根柱",
+      "status": "changed"
+    },
+    {
+      "item": "14 项管理原则",
+      "was": "「丰田 14 项管理原则」",
+      "now": "莱克（Jeffrey Liker）的学者归纳",
+      "status": "changed"
+    },
+    {
+      "item": "分册字数",
+      "was": "约 816,000 字符 / 89 万字",
+      "now": "实测 471,419 字符 / 1,085,606 字节（字节数被误记为字符数）",
+      "status": "changed"
+    },
+    {
+      "item": "《新丰田生产方式》作者",
+      "was": "未明确",
+      "now": "门田安弘，非大野耐一（大野只写赠言）",
+      "status": "changed"
+    },
+    {
+      "item": "新乡重夫身份",
+      "was": "未明确",
+      "now": "非丰田雇员，旭化成等化学企业外部顾问",
+      "status": "changed"
+    },
+    {
+      "item": "「OEE 85% = 世界级行业基准」",
+      "was": "当作承诺值",
+      "now": "deprecated → 改为「拉伸目标 + 按行业校准」",
+      "status": "deprecated"
+    },
+    {
+      "item": "「某企业改善 XX% 可作承诺值」",
+      "was": "隐含可用",
+      "now": "deprecated → 改为「案例改善率是别人的起点，不是你的承诺」",
+      "status": "deprecated"
+    },
+    {
+      "item": "VSM 画法来源",
+      "was": "引《精益生产推行手册》p105–113（二手转述）",
+      "now": "以 Rother & Shook《学习观察》原典为准：现状图四步、未来状态 8 问、术语用定拍工序/均衡/门到门",
+      "status": "changed"
+    },
+    {
+      "item": "「能否跨行业」的质疑方",
+      "was": "称'制造业概念套到知识型流程会削足适履'",
+      "now": "该说法无一手依据，已删除；原文核实 Womack 与 Ballé 均支持跨行业，真正前提是绿域/灰域起点差异",
+      "status": "deprecated"
+    },
+    {
+      "item": "未来状态图关键问题数",
+      "was": "5 问",
+      "now": "8 问（第6–8 问为均衡多产品/定拍批量/设备工艺改进与爆炸点）",
+      "status": "changed"
+    },
+    {
+      "item": "标准作业的授权层",
+      "was": "未收录",
+      "now": "Liker enabling vs coercive bureaucracy；工人是分析师与问题解决者",
+      "status": "新增"
+    },
+    {
+      "item": "目视化的目的",
+      "was": "仅术语层提'不等于展示白板'",
+      "now": "原则级判据：目视化是让问题无处藏；5S 清扫本质是 inspection",
+      "status": "新增"
+    },
+    {
+      "item": "技术准入",
+      "was": "M5「先 lean 再 digital」口号",
+      "now": "Liker 酸测试三问；丰田刻意落后于对手是纪律",
+      "status": "强化"
+    },
+    {
+      "item": "C.T 取值规则",
+      "was": "10 次取最小值",
+      "now": "取「出现次数最多、最短的时间」（原书算例取 6 秒而非 4 秒）",
+      "status": "changed"
+    },
+    {
+      "item": "节拍扣减与 OEE 预留",
+      "was": "未给此告诫",
+      "now": "两个都不要做（扣换型时间破坏全厂鼓点一致性；预留 OEE 构成内建浪费）",
+      "status": "新增告诫"
+    }
+  ],
+  "rollback": "references/research/archive/v1.3.0/",
+  "honest_limits": [
+    "信息截止 2026-10-07；工具层与数字化层衰减最快（建议每 3-6 个月回看 research/02-tools.md 与 05-sources.md），心智模型 1-2 年才动一次",
+    "本skill 不能替代真实从业经验；诊断工厂必须实地走线，所有模型是提问框架而非结论来源",
+    "公开材料有严重偏差：成功案例远多于失败案例，流传的改善率绝大多数无法验证；学术实证本身也不一致",
+    "中文圈一手译本页未逐本核验 ISBN/译者",
+    "功率半导体封装场景的 lean 专项文献未系统梳理（本次为通用制造业调研）",
+    "学术批判维度不够系统（以 Coffey、鎌田慧为代表，未完整梳理工业社会学文献群）",
+    "术语译名冲突 10 处并列保留未裁决",
+    "决策树中的启发式基线（增值比<5%、换型>30%、准时率<95%）须本厂校准，非通用阈值"
+  ],
+  "primary_corpus": {
+    "note": "《精益书籍》原文级蒸馏 —— 本skill 知识正典层的语料底座",
+    "source_dir": "D:\\BaiduNetdiskDownload\\精益工具包\\精益书籍",
+    "books": 8,
+    "total_pages": 4138,
+    "ocr_pages": 1564,
+    "ocr_errors": 0,
+    "normalized_chars": 2978,
+    "normalized_note": "归一化后约 298 万字符 / 9 个 normalized 文件（金矿三册拆分 + 8 本书）",
+    "extraction_pipeline": [
+      "PyMuPDF 抽位图(1150px) → RapidOCR 3 进程并行（扫描件 1564 页）",
+      "pypdf 文本层直抽（Toyota Way 365 页 + 金矿 1432 页）",
+      "chunk 断点续跑 + 写入容错（沙箱拒绝单页不中断整批）",
+      "归一化：合并版式换行断裂，保留 97.7%"
+    ],
+    "books_detail": [
+      {
+        "slug": "toyota-wps",
+        "title": "丰田生产方式（大野耐一）",
+        "pages": 201,
+        "how": "OCR",
+        "lang": "zh"
+      },
+      {
+        "slug": "toyota-way-liker",
+        "title": "The Toyota Way（Liker 2004）",
+        "pages": 365,
+        "how": "文本层",
+        "lang": "en"
+      },
+      {
+        "slug": "machine-that-changed",
+        "title": "改变世界的机器（Womack 1990）",
+        "pages": 283,
+        "how": "OCR",
+        "lang": "zh"
+      },
+      {
+        "slug": "lean-thinking",
+        "title": "精益思想（Womack & Jones）",
+        "pages": 450,
+        "how": "OCR",
+        "lang": "zh"
+      },
+      {
+        "slug": "learning-to-see",
+        "title": "学习观察（Rother & Shook，VSM 原典）",
+        "pages": 165,
+        "how": "OCR",
+        "lang": "zh"
+      },
+      {
+        "slug": "lean-toolbox",
+        "title": "精益工具箱（第4版）",
+        "pages": 465,
+        "how": "OCR",
+        "lang": "zh"
+      },
+      {
+        "slug": "gold1",
+        "title": "金矿Ⅰ：精益管理 挖掘利润（Ballé 2005）",
+        "pages": 481,
+        "how": "文本层切分",
+        "lang": "zh"
+      },
+      {
+        "slug": "gold2",
+        "title": "金矿Ⅱ：精益管理者的成长（Ballé 2009）",
+        "pages": 646,
+        "how": "文本层切分",
+        "lang": "zh"
+      },
+      {
+        "slug": "gold3",
+        "title": "金矿Ⅲ：精益领导者的软实力（Ballé 2013）",
+        "pages": 301,
+        "how": "文本层切分",
+        "lang": "zh"
+      },
+      {
+        "slug": "lean-toolbox",
+        "title": "精益工具箱（第4版，Bicheno & Holweg）",
+        "pages": 465,
+        "how": "OCR",
+        "lang": "zh",
+        "note": "工具书；补齐 §6.3 负荷/产能/成熟度评估与 §6.2.6b-e"
+      }
+    ],
+    "candidates": {
+      "total_units": 130,
+      "files": {
+        "01-frameworks.md": 17,
+        "02-principles.md": 12,
+        "03-cases-and-antipatterns.md": 32,
+        "04-terms.md": 24,
+        "05-figures-voices.md": 15,
+        "06-vsm-authoritative.md": "VSM 原典专项（六部分）",
+        "07-toolbox-philosophy.md": "理念/框架/浪费/成熟度（第 1–4、7 章）",
+        "08-toolbox-params.md": "工具参数（第 5、6、8 章）",
+        "08-crosscheck.md": "★与现有 16 分册的交叉校验报告"
+      }
+    },
+    "page_offset_note": "⚠️ 《精益工具箱》的 OCR 页标记 = 印刷页 **+24**（独立核实 4 处：公式 12→36、新浪费 39→63、失效模式 63→87、精益评估 178→202）。引用该书时以文件标记页为准。"
+  },
+  "stage15_verification": {
+    "method": "V1 跨域适用性 / V2 预测力 / V3 独特性，三重逐条判定",
+    "prescreen_false_positive_rate": 0.8,
+    "verdicts": {
+      "keep": 77,
+      "demote_merge": 19,
+      "reject": 4
+    },
+    "rejected": [
+      {
+        "id": "F-04",
+        "reason": "3M 因果内容已逐字并入 §4#10，无新增"
+      },
+      {
+        "id": "AUTHOR-08",
+        "reason": "Liker p20 已逐字并入 §10.7.1，零新增"
+      },
+      {
+        "id": "AUTHOR-10",
+        "reason": "空单元（检索未见），无原话无页码"
+      },
+      {
+        "id": "DISPUTE-02",
+        "reason": "看板原话已逐字并入 §10.7.1，零新增"
+      }
+    ],
+    "ocr_typos_cleaned": 14,
+    "ocr_typos_with_evidence": 10,
+    "lessons": [
+      "程序预筛假阳性率 80% —— 自动筛选只能筛「疑似」，定案必须人工比对",
+      "检测关键词须 ≥8 字符且低频（用「the first」这类高频词会零鉴别力）",
+      "汇总小节会被误当候选单元，需按编号前缀 + 标题特征区分"
+    ],
+    "verdict_files": [
+      "_distill/lean-books/stage15/VERDICT_A.md",
+      "_distill/lean-books/stage15/VERDICT_B.md"
+    ],
+    "crosscheck_against_existing": {
+      "source": "《精益工具箱》第4版（工具书）",
+      "purpose": "现有 16 分册的 30+ 工具参数与 60+ 公式从未与经典著作核对过",
+      "result": {
+        "consistent": 12,
+        "inconsistent": 8,
+        "new_in_book": 16
+      },
+      "fixed": [
+        {
+          "item": "C.T 取值规则",
+          "was": "观测 10 次取最小值（SKILL.md 术语表 + jit.md L300）",
+          "now": "取「出现次数最多、最短的时间」；原书算例 4,5,6,6,7,7,8,8,8,8 → 取 6 秒",
+          "source": "精益工具箱 文件 p141"
+        },
+        {
+          "item": "节拍是否扣换型时间 / 预留 OEE",
+          "was": "无此告诫",
+          "now": "两个都不要做——扣换型时间「不是一个好的最佳实践」；预留 OEE「也不好」，会构成内建浪费",
+          "source": "精益工具箱 文件 p138"
+        }
+      ],
+      "added_concepts": [
+        "补料间隔 pitch = 节拍 × 物料箱数量（15–30 分钟）—— Heijunka 系统的鼓点",
+        "目标周期时间 ≈ 90% 节拍（变异大时更低）",
+        "Mura → Muri → Muda 的具体传导方向",
+        "I 型/II 型浪费二分（简化 vs 彻底消除）",
+        "负荷-产能公式与「不该追求 100% 负荷」",
+        "runner/repeater/stranger 三层需求分类",
+        "四种成熟度评估（小林 20 关键 / 雪恩伯格尔16 原则 / 古德森 / 新乡卓越奖）"
+      ],
+      "numeric_discipline": "现有 skill 的 6 类数字（换型分级、生产·换产比、平准化振幅、单元人数经验阈值、PQ 累计率、OEE>85%）本书未支持 → 一律标「本书未支持/待核」，**未判错**"
+    }
+  },
+  "intro_refresh": {
+    "version": "2.0.0-patch4",
+    "date": "2026-10-08",
+    "description_chars": 1001,
+    "trigger_count": 223,
+    "why": "patch3/patch4 新增 8 本经典著作原文级蒸馏（298 万字）与新章节，但 description 仍是 patch1 时代内容（只提 7 处纠错、无 VSM 原典、无工具箱）",
+    "what_changed": [
+      "description 并入：8 本原文级蒸馏、9 处事实校正（原7）、VSM 原典四步+未来状态8问+7准则、负荷−产能与富余产能、Mura→Muri→Muda 传导链、I型·II型浪费、新的浪费 10 类、四种成熟度评估",
+      "新增触发词 29 项：学习观察/精益工具箱/比切诺/门田安弘/伯乐/金矿/补料间隔/目标周期时间/产能缺口/富余产能/I型浪费/II型浪费/新的浪费/知识浪费/精益成熟度/成熟度评估/小林评估/雪恩伯格尔/新乡卓越奖/实施失效模式/精益失效模式/定拍工序/门到门/未来状态图/精益准则/绿域/灰域/技术酸测试/精益企业屋",
+      "§0.1 触发策略计数与举例同步；§0 能力表新增「8 本经典著作原文级蒸馏」一行"
+    ],
+    "trigger_tiers": {
+      "一级·直接激活": "领域专有词（语义唯一）",
+      "二级·需共现": "5S/6S/A3/MES/ERP/8D/SPC/Cpk/QCC/OJD/TBP + lean/kaizen/jidoka/takt/gemba/smed/andon/heijunka/poka-yoke",
+      "新增一级词": [
+        "补料间隔",
+        "定拍工序",
+        "门到门",
+        "精益成熟度",
+        "I 型浪费",
+        "门田安弘",
+        "伯乐"
+      ]
+    }
+  },
+  "fact_corrections_note": "共 9 处：前 6 处为行业流行谬误，后 3 处（第 7 条查无此书、第 8 条 3M 并列、第 9 条自働化用字）含本 skill 自身的缺陷，已全部自纠。另：第 3 处（五大原则归属）与 patch3/patch4 新增的 VSM 画法来源、跨行业质疑方、未来状态问题数、C.T 取值规则 等修正，一并见 SKILL.md §14.1 changed 表。"
+}
