@@ -9,7 +9,7 @@
 import pathlib
 import sys
 
-D = pathlib.Path(r"D:\BaiduNetdiskDownload\精益工具包\精益书籍")
+D = pathlib.Path(r"<语料根目录>\精益书籍")
 
 try:
     import pypdf

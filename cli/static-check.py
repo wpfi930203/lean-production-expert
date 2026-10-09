@@ -13,7 +13,7 @@ import pathlib
 import re
 import sys
 
-CLI = pathlib.Path(r"C:\Users\fiona\.workbuddy\skills\lean-production-expert\cli")
+CLI = pathlib.Path(__file__).resolve().parent
 SCRIPTS = sorted(p for p in CLI.rglob("*.sh"))
 
 FLAGS = ["--help", "--explain", "--dry-run", "--json"]

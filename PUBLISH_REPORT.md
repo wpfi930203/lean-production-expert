@@ -3,7 +3,7 @@
 > **产物**：`精益生产专家`（slug: `lean-production-expert`）· v1.0.0
 > **流水线**：仓颉蒸馏长红版 v1.5.0 · 阶段 5（内容预检 + 渐进发布）
 > **报告生成时间**：2026-10-01
-> **语料规模**：231 份文件 / 2,742,450 字符 / 14 个模块（源自 `D:\BaiduNetdiskDownload\精益工具包`）
+> **语料规模**：231 份文件 / 2,742,450 字符 / 14 个模块（源自 `<语料根目录>`）
 
 ---
 
@@ -134,7 +134,7 @@
 
 | 项 | 值 |
 |---|---|
-| 目标路径 | `C:\Users\fiona\.workbuddy\skills\lean-production-expert\` |
+| 目标路径 | `<HOME>\.workbuddy\skills\lean-production-expert\` |
 | 文件数 | **30** |
 | 体积 | **709.4 KB**（726,288 bytes） |
 | 内容哈希一致性 | **逐文件 MD5 全等** ✅ |
@@ -176,8 +176,8 @@ lean-production-expert/
 
 | 检查项 | 期望 | 实测 |
 |---|---|---|
-| `C:\Users\fiona\.skillhub\skills_store_cli.py` | 存在 | ❌ 不存在（`~/.skillhub` 目录整体缺失） |
-| `C:\Users\34963\.skillhub\skills_store_cli.py`（流水线文档中的默认路径） | 存在 | ❌ 不存在 |
+| `<HOME>\.skillhub\skills_store_cli.py` | 存在 | ❌ 不存在（`~/.skillhub` 目录整体缺失） |
+| `<HOME>\.skillhub\skills_store_cli.py`（流水线文档中的默认路径） | 存在 | ❌ 不存在 |
 | `where skills_store_cli.py` | 命中 | ❌ not found |
 | `PATH` 中含 skillhub 的条目 | 有 | ❌ 无 |
 | 环境变量中的 `skh_` token | 有 | ❌ 无 |
@@ -188,13 +188,13 @@ lean-production-expert/
 **第 ① 步 — 预检（不发起请求，零风险）**
 
 ```bash
-python "<skills_store_cli.py 的绝对路径>" publish "C:\Users\fiona\.workbuddy\skills\lean-production-expert" --dry-run --json
+python "<skills_store_cli.py 的绝对路径>" publish "<HOME>\.workbuddy\skills\lean-production-expert" --dry-run --json
 ```
 
 **第 ② 步 — 发布探针（先发 1 个最安全版，符合 5.1 强制流程）**
 
 ```bash
-python "<skills_store_cli.py 的绝对路径>" publish "C:\Users\fiona\.workbuddy\skills\lean-production-expert" --token "<skh_...>" --changelog "蒸馏自精益工具包 231 份课件；v1.0.0；已完成阶段5.0内容预检（主题🟢；企业名与公众人物姓名中性化；数值保真）" --json
+python "<skills_store_cli.py 的绝对路径>" publish "<HOME>\.workbuddy\skills\lean-production-expert" --token "<skh_...>" --changelog "蒸馏自精益工具包 231 份课件；v1.0.0；已完成阶段5.0内容预检（主题🟢；企业名与公众人物姓名中性化；数值保真）" --json
 ```
 
 **第 ③ 步 — 等待回执，再逐个/整体发布**
@@ -230,7 +230,7 @@ python "<skills_store_cli.py 的绝对路径>" publish "C:\Users\fiona\.workbudd
 
 | 维度 | 事实 |
 |---|---|
-| 语料根目录 | `D:\BaiduNetdiskDownload\精益工具包` |
+| 语料根目录 | `<语料根目录>` |
 | 语料清点 | 231 份文件（227 OK + 4 缓存复用 + 7 跳过 + 4 失败）；2,742,450 字符；14 个模块 |
 | 提取稿 | `_distill/extract/*.md` 7 份，共 223,816 字符 |
 | 视频转写 | `_distill/corpus_video/*.txt` 3 份（柏拉图 / 层别法 / 散布图），faster-whisper small |

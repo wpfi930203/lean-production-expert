@@ -4,7 +4,7 @@ import re
 
 import yaml
 
-T = pathlib.Path(r"C:\Users\fiona\.workbuddy\skills\lean-production-expert")
+T = pathlib.Path(__file__).resolve().parent.parent
 txt = (T / "SKILL.md").read_text(encoding="utf-8")
 end = txt.index("\n---", 3)
 fm = txt[3:end]

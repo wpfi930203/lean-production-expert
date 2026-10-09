@@ -15,7 +15,7 @@ import pathlib
 import re
 from collections import Counter
 
-B = pathlib.Path(r"C:\Users\fiona\.workbuddy\skills\lean-production-expert")
+B = pathlib.Path(__file__).resolve().parent.parent
 CLI = B / "cli"
 skill = (B / "SKILL.md").read_text(encoding="utf-8")
 

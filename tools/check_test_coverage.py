@@ -5,7 +5,7 @@
 import json
 import pathlib
 
-B = pathlib.Path(r"C:\Users\fiona\.workbuddy\skills\lean-production-expert")
+B = pathlib.Path(__file__).resolve().parent.parent
 d = json.loads((B / "test-prompts-v2.json").read_text(encoding="utf-8"))
 ps = d["prompts"]
 blob = "\n".join(x["prompt"] + "\n" + x["expect"] for x in ps)

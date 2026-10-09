@@ -41,3 +41,15 @@ desktop.ini
 *.tmp
 *.bak
 ~$*
+
+# ============================================================
+# 一次性发布工具（含本机路径与发布流程配置，不入库）
+# ============================================================
+# 这些是本机发布流程用的脚本，不属于技能功能，且含机器特定配置。
+# 保留本地以便后续复推。
+tools/push_to_github.py
+tools/push_via_api.py
+tools/scan_leaks.py
+tools/redact_paths.py
+tools/fix_hardcoded_paths.py
+tools/inventory_for_upload.py

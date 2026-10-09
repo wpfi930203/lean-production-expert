@@ -26,7 +26,7 @@ import pathlib
 
 from PIL import Image, ImageDraw
 
-OUT = pathlib.Path(r"C:\Users\fiona\.workbuddy\skills\lean-production-expert\icons")
+OUT = pathlib.Path(__file__).resolve().parent.parent / "icons"
 OUT.mkdir(parents=True, exist_ok=True)
 
 S = 200          # 输出尺寸

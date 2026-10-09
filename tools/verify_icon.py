@@ -3,7 +3,7 @@ import pathlib
 import re
 import struct
 
-B = pathlib.Path(r"C:\Users\fiona\.workbuddy\skills\lean-production-expert")
+B = pathlib.Path(__file__).resolve().parent.parent
 txt = (B / "SKILL.md").read_text(encoding="utf-8")
 fm = txt.split("---")[1]
 

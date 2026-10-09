@@ -77,12 +77,12 @@
 
 ```bash
 # 改配色 / 结构 → 编辑 tools/make_icon.py 顶部的颜色常量或结构坐标
-"C:/Users/fiona/.workbuddy/binaries/python/envs/default/Scripts/python.exe" \
-  "C:/Users/fiona/.workbuddy/skills/lean-production-expert/tools/make_icon.py"
+"<HOME>/.workbuddy/binaries/python/envs/default/Scripts/python.exe" \
+  "<HOME>/.workbuddy/skills/lean-production-expert/tools/make_icon.py"
 
 # 改完校验 frontmatter 与文件一致性
-"C:/Users/fiona/.workbuddy/binaries/python/versions/3.13.12/python.exe" \
-  "C:/Users/fiona/.workbuddy/skills/lean-production-expert/tools/verify_icon.py"
+"<HOME>/.workbuddy/binaries/python/versions/3.13.12/python.exe" \
+  "<HOME>/.workbuddy/skills/lean-production-expert/tools/verify_icon.py"
 ```
 
 > `make_icon.py` 会同时输出 PNG 与 SVG，二者结构一致。改完记得**看一眼渲染结果**，

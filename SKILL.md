@@ -923,7 +923,7 @@ Womack & Jones 把浪费分两类（**这个二分比"七大浪费"更有决策�
 > **v2.0 起本节内容已合并至 §13 蒸馏溯源与可复现性**，避免两处维护同一份溯源数据。
 >
 > 摘要（详见 §13）：
-> - **执行层语料**：`D:\BaiduNetdiskDownload\精益工具包`，242 文件 / 898.5 MB → 抽取 231 份 / 274 万字 → 16 册 **47.1 万字**（实测字符数，v2.0 零删除）
+> - **执行层语料**：`<语料根目录>`，242 文件 / 898.5 MB → 抽取 231 份 / 274 万字 → 16 册 **47.1 万字**（实测字符数，v2.0 零删除）
 > - **认知层语料**：master-skill 六轨网络蒸馏（2026-10-07），约 12.5 万字，含 7 处事实纠错
 > - **回滚点**：`references/research/archive/v1.3.0/`
 
@@ -1287,7 +1287,7 @@ Liker 把 14 原则第 6 条题为 *Standardized Tasks Are the Foundation for Co
 
 | 项 | 数值 |
 |---|---|
-| 原始输入 | `D:\BaiduNetdiskDownload\精益工具包`，242 个文件 / 898.5 MB |
+| 原始输入 | `<语料根目录>`，242 个文件 / 898.5 MB |
 | 文件类型 | .ppt 118｜.xls 36｜.docx 20｜.pptx 20｜.doc 15｜.xlsx 14｜.pdf 12｜.qlv 3｜.mpp 3｜.rar 1 |
 | 抽取方式 | 新版 Office 用 python-pptx / python-docx / openpyxl / pypdf；老版 `.ppt` 用**自研 OLE 记录树解析**（比 Office COM 快约 1000 倍：23.5s → 0.02s）；`.doc`/`.xls` 用 Office COM |
 | 成功抽取 | 231 份文档 / 274 万字正文；+ 3 段视频转写 |
@@ -1329,7 +1329,7 @@ Liker 把 14 原则第 6 条题为 *Standardized Tasks Are the Foundation for Co
 
 | 项| 数值 |
 |---|---|
-| 原始输入 | `D:\BaiduNetdiskDownload\精益工具包\精益生产推行手册：让精益生产真正落到实处.PDF`，370 页 / 126 MB |
+| 原始输入 | `<语料根目录>\精益生产推行手册：让精益生产真正落到实处.PDF`，370 页 / 126 MB |
 | 语料形态 | 纯扫描版（369/370 页无文字层），读秀扫描 |
 | OCR 管线 | PyMuPDF 抽位图（1150px 缓存至本机 SSD）→ RapidOCR 3 进程并行（3.3–3.9 s/页，`FA_OCR_THREADS=2`）→ 合并 367/370 页，**覆盖率 99.2%，272,727 字** |
 | 断点续跑 | append + 幂等跳过；笔记本 Adaptive Connected Standby 会整机挂起长跑进程，驱动内用 `SetThreadExecutionState` 抑制待机后零冻结 |

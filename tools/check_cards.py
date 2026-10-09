@@ -13,9 +13,7 @@ import sys
 
 import yaml
 
-D = pathlib.Path(
-    r"C:\Users\fiona\.workbuddy\skills\lean-production-expert\knowledge\cards"
-)
+D = pathlib.Path(__file__).resolve().parent.parent / "knowledge" / "cards"
 cards = sorted(D.glob("*.md"))
 print(f"共 {len(cards)} 张卡片\n")
 

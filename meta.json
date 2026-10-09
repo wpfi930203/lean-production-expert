@@ -382,7 +382,7 @@
   ],
   "primary_corpus": {
     "note": "《精益书籍》原文级蒸馏 —— 本skill 知识正典层的语料底座",
-    "source_dir": "D:\\BaiduNetdiskDownload\\精益工具包\\精益书籍",
+    "source_dir": "<语料根目录>\\精益书籍",
     "books": 8,
     "total_pages": 4138,
     "ocr_pages": 1564,

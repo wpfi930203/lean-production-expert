@@ -3,7 +3,7 @@ import pathlib
 
 import yaml
 
-T = pathlib.Path(r"C:\Users\fiona\.workbuddy\skills\lean-production-expert")
+T = pathlib.Path(__file__).resolve().parent.parent
 txt = (T / "SKILL.md").read_text(encoding="utf-8")
 
 # 提取 frontmatter（起始 --- 到下一个 ---）

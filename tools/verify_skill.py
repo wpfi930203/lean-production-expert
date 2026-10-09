@@ -12,7 +12,7 @@ import pathlib
 import re
 import sys
 
-BASE = pathlib.Path(r"C:\Users\fiona\.workbuddy\skills\lean-production-expert")
+BASE = pathlib.Path(__file__).resolve().parent.parent
 SKILL = BASE / "SKILL.md"
 
 txt = SKILL.read_text(encoding="utf-8")

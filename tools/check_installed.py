@@ -14,7 +14,7 @@ import re
 import struct
 import sys
 
-B = pathlib.Path(r"C:\Users\fiona\.workbuddy\skills")
+B = pathlib.Path(__file__).resolve().parent.parent.parent
 NAME = "lean-production-expert"
 T = B / NAME
 
