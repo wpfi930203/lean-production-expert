@@ -49,6 +49,7 @@ desktop.ini
 # 保留本地以便后续复推。
 tools/push_to_github.py
 tools/push_via_api.py
+tools/push_incremental.py
 tools/scan_leaks.py
 tools/redact_paths.py
 tools/fix_hardcoded_paths.py
